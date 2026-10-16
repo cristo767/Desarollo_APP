@@ -1,7 +1,12 @@
 package picflow.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "albumes")
 data class Album(
-    val id: Int,
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
     val nombre: String,
     val descripcion: String,
     val tipo: String,
